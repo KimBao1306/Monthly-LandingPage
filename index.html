@@ -1,411 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Kim Bảo" />
+		<meta name="description" content="Assignment" />
+		<title>Assignment</title>
+		<link rel="stylesheet" type="text/css" href="./css/header.css" />
+		<link rel="stylesheet" type="text/css" href="./css/modal.css" />
+		<link rel="stylesheet" type="text/css" href="./css/classes.css" />
+		<link rel="stylesheet" type="text/css" href="./css/story.css" />
+		<link rel="stylesheet" type="text/css" href="./css/validate.css" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+		/>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Kim Bảo" />
-    <meta name="description" content="Assignment" />
-    <title>Assignment</title>
-    <link rel="stylesheet" type="text/css" href="./css/header.css" />
-    <link rel="stylesheet" type="text/css" href="./css/classes.css" />
-    <link rel="stylesheet" type="text/css" href="./css/story.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-</head>
+	<body>
+		<!-- header -->
+		<header id="header">
+			<div class="header_video">
+				<video autoplay muted loop>
+					<source src="./img/header/homebg10_les4mj.mp4" type="video/mp4" />
+				</video>
+			</div>
+			<nav class="menu">
+				<div class="menu_logo">
+					<!-- <img src="https://picsum.photos/50/50" /> -->
+					<svg width="90" height="24" fill="none">
+						<path
+							d="M.504 18H3.12l1.296-6.504c.432-2.328 1.56-3.48 3.216-3.48 1.68 0 2.424 1.272 2.064 3.024L8.328 18h2.616l1.32-6.6c.408-2.064 1.44-3.384 3.096-3.384 1.776 0 2.424 1.392 2.064 3.24l-.696 3.504c-.432 2.064.408 3.24 2.064 3.24h1.464l.408-2.208h-.456c-.72 0-1.008-.312-.816-1.2l.648-3.312c.648-3.384-1.056-5.52-4.272-5.52-1.488 0-2.928.672-4.008 2.04-.624-1.272-1.92-2.04-3.6-2.04-1.392 0-2.616.552-3.576 1.608C4.32 6.432 3.552 6 2.4 6H1.248L.84 8.256h.384c.84 0 1.08.408.888 1.416L.504 18zm27.542.24c3.432 0 6-2.352 6.576-5.472C35.27 9.12 32.99 5.76 28.91 5.76c-3.336 0-6 2.352-6.576 5.472-.648 3.648 1.608 7.008 5.712 7.008zm.12-2.376c-2.352 0-3.72-2.088-3.36-4.32.36-2.064 2.136-3.456 3.984-3.456 2.4.048 3.744 2.184 3.36 4.368-.36 2.064-2.112 3.408-3.984 3.408zM36.083 18h2.616l1.248-6.528c.408-2.184 1.512-3.456 3.36-3.456 1.68 0 2.568 1.2 2.16 3.24l-.72 3.504c-.384 2.064.12 3.24 2.352 3.24h1.176l.432-2.208h-.408c-.864 0-1.032-.264-.84-1.2l.648-3.264c.696-3.312-1.152-5.568-4.176-5.568-1.488 0-2.784.552-3.768 1.632-.24-.96-.984-1.392-2.184-1.392h-1.176l-.408 2.256h.384c.864 0 1.104.36.888 1.416L36.083 18zm13.995-9.696h1.992l-.84 4.8c-.672 3.744.264 4.896 3.936 4.896h.336l.408-2.352c-2.256 0-2.52-.384-2.112-2.568.024-.072.432-2.304.864-4.776h2.52L57.59 6h-2.52c.408-2.28.744-4.248.744-4.248l-2.856 1.416L52.454 6h-1.968l-.408 2.304zM57.568 18h2.592s1.08-6.072 1.152-6.552c.384-2.184 1.488-3.432 3.336-3.432 1.68 0 2.568 1.2 2.184 3.24l-.696 3.504c-.408 2.064.072 3.24 2.328 3.24h1.152l.408-2.208h-.36c-.864 0-1.056-.264-.864-1.2l.648-3.312c.672-3.336-1.104-5.52-4.08-5.52-1.272 0-2.4.456-3.336 1.368L63.208.48H60.64L57.568 18zm16.4 0h1.2l.433-2.28h-.36c-.744 0-1.008-.312-.84-1.224L76.873.48h-2.616l-2.448 13.992c-.36 2.064-.168 3.528 2.16 3.528zm7.592 5.76c3.84 0 5.472-2.328 6.12-5.976L89.792 6h-2.544l-1.2 6.504c-.336 2.04-1.464 3.48-3.312 3.48-1.728 0-2.448-1.224-2.064-3.216l.648-3.384C81.8 7.056 81.056 6 79.328 6h-1.464l-.384 2.232h.312c.84 0 1.056.36.84 1.44l-.576 3.024c-.648 3.36 1.176 5.544 4.152 5.544 1.152 0 2.208-.408 3.048-1.224-.096.48-.168.864-.168.84-.36 2.088-1.344 3.576-3.312 3.576-1.56 0-2.448-.768-2.832-1.944l-2.592.816c.696 2.064 2.64 3.456 5.208 3.456z"
+							fill="#fff"
+						></path>
+					</svg>
+				</div>
+				<div class="menu_links">
+					<ul>
+						<li>
+							<a class="scroll-to-classes" href="#/">Giới Thiệu</a>
+						</li>
+						<li>
+							<a href="#" class="showModal">Đăng Nhập</a>
+						</li>
+						<li>
+							<a href="#">Đặt Câu Hỏi</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="info">
+				<h1 class="info_heading">
+					Học mọi thứ trong 1 tháng
+				</h1>
+				<p class="info_explain">
+					Tham gia các lớp học cùng với các chuyên gia hướng dẫn hàng đầu
+				</p>
+				<a class="scroll-to-classes" href="#/">
+					<button class="info_btn">
+						Tham gia ngay
+					</button>
+				</a>
+			</div>
+			<div class="arrow">
+				<a class="scroll-to-classes" href="#/">
+					<i class="fas fa-sort-down fa-4x"></i>
+				</a>
+			</div>
+		</header>
+		<!-- header-end -->
 
-<body>
-    <!-- header -->
-    <header id="header">
-        <div class="header_video">
-            <video autoplay muted loop>
-                <source src="./img/header/homebg10_les4mj.mp4" type="video/mp4">
-            </video>
-        </div>
-        <nav class="menu">
-            <div class="menu_logo">
-                <!-- <img src="https://picsum.photos/50/50" /> -->
-                <svg width="90" height="24" fill="none">
-                    <path
-                        d="M.504 18H3.12l1.296-6.504c.432-2.328 1.56-3.48 3.216-3.48 1.68 0 2.424 1.272 2.064 3.024L8.328 18h2.616l1.32-6.6c.408-2.064 1.44-3.384 3.096-3.384 1.776 0 2.424 1.392 2.064 3.24l-.696 3.504c-.432 2.064.408 3.24 2.064 3.24h1.464l.408-2.208h-.456c-.72 0-1.008-.312-.816-1.2l.648-3.312c.648-3.384-1.056-5.52-4.272-5.52-1.488 0-2.928.672-4.008 2.04-.624-1.272-1.92-2.04-3.6-2.04-1.392 0-2.616.552-3.576 1.608C4.32 6.432 3.552 6 2.4 6H1.248L.84 8.256h.384c.84 0 1.08.408.888 1.416L.504 18zm27.542.24c3.432 0 6-2.352 6.576-5.472C35.27 9.12 32.99 5.76 28.91 5.76c-3.336 0-6 2.352-6.576 5.472-.648 3.648 1.608 7.008 5.712 7.008zm.12-2.376c-2.352 0-3.72-2.088-3.36-4.32.36-2.064 2.136-3.456 3.984-3.456 2.4.048 3.744 2.184 3.36 4.368-.36 2.064-2.112 3.408-3.984 3.408zM36.083 18h2.616l1.248-6.528c.408-2.184 1.512-3.456 3.36-3.456 1.68 0 2.568 1.2 2.16 3.24l-.72 3.504c-.384 2.064.12 3.24 2.352 3.24h1.176l.432-2.208h-.408c-.864 0-1.032-.264-.84-1.2l.648-3.264c.696-3.312-1.152-5.568-4.176-5.568-1.488 0-2.784.552-3.768 1.632-.24-.96-.984-1.392-2.184-1.392h-1.176l-.408 2.256h.384c.864 0 1.104.36.888 1.416L36.083 18zm13.995-9.696h1.992l-.84 4.8c-.672 3.744.264 4.896 3.936 4.896h.336l.408-2.352c-2.256 0-2.52-.384-2.112-2.568.024-.072.432-2.304.864-4.776h2.52L57.59 6h-2.52c.408-2.28.744-4.248.744-4.248l-2.856 1.416L52.454 6h-1.968l-.408 2.304zM57.568 18h2.592s1.08-6.072 1.152-6.552c.384-2.184 1.488-3.432 3.336-3.432 1.68 0 2.568 1.2 2.184 3.24l-.696 3.504c-.408 2.064.072 3.24 2.328 3.24h1.152l.408-2.208h-.36c-.864 0-1.056-.264-.864-1.2l.648-3.312c.672-3.336-1.104-5.52-4.08-5.52-1.272 0-2.4.456-3.336 1.368L63.208.48H60.64L57.568 18zm16.4 0h1.2l.433-2.28h-.36c-.744 0-1.008-.312-.84-1.224L76.873.48h-2.616l-2.448 13.992c-.36 2.064-.168 3.528 2.16 3.528zm7.592 5.76c3.84 0 5.472-2.328 6.12-5.976L89.792 6h-2.544l-1.2 6.504c-.336 2.04-1.464 3.48-3.312 3.48-1.728 0-2.448-1.224-2.064-3.216l.648-3.384C81.8 7.056 81.056 6 79.328 6h-1.464l-.384 2.232h.312c.84 0 1.056.36.84 1.44l-.576 3.024c-.648 3.36 1.176 5.544 4.152 5.544 1.152 0 2.208-.408 3.048-1.224-.096.48-.168.864-.168.84-.36 2.088-1.344 3.576-3.312 3.576-1.56 0-2.448-.768-2.832-1.944l-2.592.816c.696 2.064 2.64 3.456 5.208 3.456z"
-                        fill="#fff"></path>
-                </svg>
-            </div>
-            <div class="menu_links">
-                <ul>
-                    <li>
-                        <a class="scroll-to-classes" href="#/">Giới Thiệu</a>
-                    </li>
-                    <li>
-                        <a href="#" class="showModal">Đăng Nhập</a>
-                    </li>
-                    <li>
-                        <a href="#">Đặt Câu Hỏi</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="info">
-            <h1 class="info_heading">
-                Học mọi thứ trong 1 tháng
-            </h1>
-            <p class="info_explain">Tham gia các lớp học cùng với các chuyên gia hướng dẫn hàng đầu</p>
-            <a class="scroll-to-classes" href="#/">
-                <button class="info_btn">
-                    Tham gia ngay
-                </button>
-            </a>
-        </div>
-        <div class="arrow">
-            <a class="scroll-to-classes" href="#/">
-                <i class="fas fa-sort-down fa-4x"></i>
-            </a>
-        </div>
-    </header>
-    <!-- header-end -->
+		<!-- clasess -->
+		<div class="classes" id="scroll_classes">
+			<div class="info">
+				<h3 class="info_title">
+					học trong vòng 1 tháng
+				</h3>
+				<h1 class="info_heading">
+					Chọn 1 lớp học, tăng kỹ năng trong 30 ngày
+				</h1>
+				<p class="info_explain">
+					Từ hội họa đến sản xuất âm nhạc, chúng tôi đã thiết kế những trải
+					nghiệm học tập kéo dài một tháng bởi những giảng viên giỏi nhất thế
+					giới.
+				</p>
+			</div>
+			<div class="classes_container">
+				<div class="room">
+					<div class="room_flag">
+						<div>30 Ngày</div>
+					</div>
+					<div class="room_content">
+						<div class="room_title">
+							Sản Xuất Âm Nhạc<br />
+							<span>Với Andrew Huang </span>
+						</div>
+						<div class="room_desc">
+							Một nhạc sĩ đa năng và sung mãn, Andrew đã phát hành hơn 2.000 bài
+							hát ở nhiều thể loại. Anh có hơn 1,92 triệu người đăng ký và hơn
+							200 triệu lượt xem trên kênh YouTube của mình.
+						</div>
+						<button class="room_btn">Tham gia</button>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room_flag">
+						<div>30 Ngày</div>
+					</div>
+					<div class="room_content">
+						<div class="room_title">
+							Thể Hiện Ý Tưởng<br />
+							<span>Với Ten Hunded </span>
+						</div>
+						<div class="room_desc">
+							Ten Hundred là một nghệ sĩ chuyên về công việc sáng tác, giàu trí
+							tưởng tượng với nghệ thuật và tranh tường trên khắp thế giới. Ông
+							đã truyền cảm hứng cho hàng trăm ngàn nghệ sĩ với công việc của
+							mình.
+						</div>
+						<button class="room_btn">Tham gia</button>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room_flag">
+						<div>30 Ngày</div>
+					</div>
+					<div class="room_content">
+						<div class="room_title">
+							Ca Sĩ Chuyên Nghiệp<br />
+							<span>Với Stevie Mackey </span>
+						</div>
+						<div class="room_desc">
+							Huấn luyện viên giọng ca nổi tiếng Stevie Mackey đã làm việc với
+							Selena Gomez, Jennifer Lopez, Kanye West, Adam Levine, để kể tên
+							một vài người, và là huấn luyện viên thanh nhạc trên The Voice của
+							NBC trong 8 mùa.
+						</div>
+						<button class="room_btn">Tham gia</button>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room_flag">
+						<div>30 Ngày</div>
+					</div>
+					<div class="room_content">
+						<div class="room_title">
+							Viết Và Sáng Tác Nhạc<br />
+							<span>Với Blanks </span>
+						</div>
+						<div class="room_desc">
+							Blanks là một nhạc sĩ và YouTuber, với hơn một triệu người đăng
+							ký, được biết đến với âm nhạc mộc mạc và những tác phẩm âm nhạc ấn
+							tượng của anh ấy trên Youtube.
+						</div>
+						<button class="room_btn">Tham gia</button>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room_flag">
+						<div>30 Ngày</div>
+					</div>
+					<div class="room_content">
+						<div class="room_title">
+							Tranh chân dung thực tế<br />
+							<span>Với Daria Callie </span>
+						</div>
+						<div class="room_desc">
+							Daria Callie đã xây dựng lượng khán giả lớn trên YouTube cho các
+							bức tranh chân dung thực tế, và truyền cảm hứng cho hàng trăm ngàn
+							nghệ sĩ trên khắp thế giới.
+						</div>
+						<button class="room_btn">Tham gia</button>
+					</div>
+				</div>
+				<div class="room">
+					<div class="room_flag">
+						<div>30 Ngày</div>
+					</div>
+					<div class="room_content">
+						<div class="room_title">
+							Làm Phim Từ Con Số 0<br />
+							<span>Với Matt Komo </span>
+						</div>
+						<div class="room_desc">
+							Nhà làm phim và cựu Trưởng phòng Nội dung xã hội tại GoPro, Matt
+							Komo được coi là người tiên phong trong việc kể chuyện trên
+							Internet, truyền cảm hứng cho vô số nhà làm phim trên Instagram và
+							YouTube.
+						</div>
+						<button class="room_btn">Tham gia</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- clasess-end -->
 
-    <!-- clasess -->
-    <div class="classes" id="scroll_classes">
-        <div class="info">
-            <h3 class="info_title">
-                học trong vòng 1 tháng
-            </h3>
-            <h1 class="info_heading">
-                Chọn 1 lớp học, tăng kỹ năng trong 30 ngày
-            </h1>
-            <p class="info_explain">Từ hội họa đến sản xuất âm nhạc, chúng tôi đã thiết kế những trải
-                nghiệm học tập kéo dài một tháng bởi những giảng viên giỏi nhất thế giới.</p>
-        </div>
-        <div class="classes_container">
-            <div class="room">
-                <div class="room_flag">
-                    <div>30 Ngày</div>
-                </div>
-                <div class="room_content">
-                    <div class="room_title">
-                        Sản Xuất Âm Nhạc<br>
-                        <span>Với Andrew Huang </span>
-                    </div>
-                    <div class="room_desc">Một nhạc sĩ đa năng và sung mãn, Andrew đã phát hành hơn 2.000 bài hát ở
-                        nhiều
-                        thể loại. Anh có hơn 1,92 triệu người đăng ký và hơn 200 triệu lượt xem trên kênh YouTube của
-                        mình.</div>
-                    <button class="room_btn">Tham gia</button>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room_flag">
-                    <div>30 Ngày</div>
-                </div>
-                <div class="room_content">
-                    <div class="room_title">
-                        Thể Hiện Ý Tưởng<br>
-                        <span>Với Ten Hunded </span>
-                    </div>
-                    <div class="room_desc">Ten Hundred là một nghệ sĩ chuyên về công việc sáng tác, giàu trí tưởng tượng
-                        với nghệ thuật và tranh tường trên khắp thế giới. Ông đã truyền cảm hứng cho hàng trăm ngàn nghệ
-                        sĩ với công việc của mình.
-                    </div>
-                    <button class="room_btn">Tham gia</button>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room_flag">
-                    <div>30 Ngày</div>
-                </div>
-                <div class="room_content">
-                    <div class="room_title">
-                        Ca Sĩ Chuyên Nghiệp<br>
-                        <span>Với Stevie Mackey </span>
-                    </div>
-                    <div class="room_desc">Huấn luyện viên giọng ca nổi tiếng Stevie Mackey đã làm việc với Selena
-                        Gomez, Jennifer Lopez, Kanye West, Adam Levine, để kể tên một vài người, và là huấn luyện viên
-                        thanh nhạc trên The Voice của NBC trong 8 mùa.</div>
-                    <button class="room_btn">Tham gia</button>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room_flag">
-                    <div>30 Ngày</div>
-                </div>
-                <div class="room_content">
-                    <div class="room_title">
-                        Viết Và Sáng Tác Nhạc<br>
-                        <span>Với Blanks </span>
-                    </div>
-                    <div class="room_desc">Blanks là một nhạc sĩ và YouTuber, với hơn một triệu người đăng ký, được biết
-                        đến với âm nhạc mộc mạc và những tác phẩm âm nhạc ấn tượng của anh ấy trên Youtube.
-                    </div>
-                    <button class="room_btn">Tham gia</button>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room_flag">
-                    <div>30 Ngày</div>
-                </div>
-                <div class="room_content">
-                    <div class="room_title">
-                        Tranh chân dung thực tế<br>
-                        <span>Với Daria Callie </span>
-                    </div>
-                    <div class="room_desc">Daria Callie đã xây dựng lượng khán giả lớn trên YouTube cho các bức tranh
-                        chân dung thực tế, và truyền cảm hứng cho hàng trăm ngàn nghệ
-                        sĩ trên khắp thế giới.</div>
-                    <button class="room_btn">Tham gia</button>
-                </div>
-            </div>
-            <div class="room">
-                <div class="room_flag">
-                    <div>30 Ngày</div>
-                </div>
-                <div class="room_content">
-                    <div class="room_title">
-                        Làm Phim Từ Con Số 0<br>
-                        <span>Với Matt Komo </span>
-                    </div>
-                    <div class="room_desc">Nhà làm phim và cựu Trưởng phòng Nội dung xã hội tại GoPro, Matt Komo được
-                        coi là người tiên phong trong việc kể chuyện trên Internet, truyền cảm hứng cho vô số nhà làm
-                        phim trên Instagram và YouTube.</div>
-                    <button class="room_btn">Tham gia</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- clasess-end -->
+		<!-- story -->
+		<div class="story classes">
+			<!-- story-1 -->
+			<div class="story-1">
+				<div class="info">
+					<h3 class="info_title">
+						Trong lúc học của bạn
+					</h3>
+					<h1 class="info_heading">
+						Tạo một thứ đáng để sẻ chia
+					</h1>
+					<p class="info_explain">
+						Cho dù đó là một bức tranh đơn giản, bài hát mộc mạc hay một bộ
+						phim, các lớp học hàng tháng được thiết kế với các chương trình
+						giảng dạy từng bước để trong 1 tháng, bạn sẽ tạo ra thứ mà bạn muốn
+						chia sẻ.
+					</p>
+				</div>
+				<div class="slide_story-1">
+					<img src="./img/story/share/story1.jpg" alt="" />
+					<img src="./img/story/share/story2.jpg" alt="" />
+					<img src="./img/story/share/story3.jpg" alt="" />
+					<img src="./img/story/share/story4.jpg" alt="" />
+					<img src="./img/story/share/story5.png" alt="" />
+					<img src="./img/story/share/story6.png" alt="" />
+					<img src="./img/story/share/story1.jpg" alt="" />
+					<img src="./img/story/share/story2.jpg" alt="" />
+					<img src="./img/story/share/story3.jpg" alt="" />
+					<img src="./img/story/share/story4.jpg" alt="" />
+				</div>
+			</div>
+			<!-- story-1-end -->
 
-    <!-- story -->
-    <div class="story classes">
-        <!-- story-1 -->
-        <div class="story-1">
-            <div class="info">
-                <h3 class="info_title">
-                    Trong lúc học của bạn
-                </h3>
-                <h1 class="info_heading">
-                    Tạo một thứ đáng để sẻ chia
-                </h1>
-                <p class="info_explain">Cho dù đó là một bức tranh đơn giản, bài hát mộc mạc hay một bộ
-                    phim,
-                    các lớp học hàng tháng được thiết kế với các chương trình giảng dạy từng bước để trong 1 tháng,
-                    bạn sẽ tạo ra thứ mà bạn muốn chia sẻ.</p>
-            </div>
-            <div class="slide_story-1">
-                <img src="./img/story/share/story1.jpg" alt="">
-                <img src="./img/story/share/story2.jpg" alt="">
-                <img src="./img/story/share/story3.jpg" alt="">
-                <img src="./img/story/share/story4.jpg" alt="">
-                <img src="./img/story/share/story5.png" alt="">
-                <img src="./img/story/share/story6.png" alt="">
-                <img src="./img/story/share/story1.jpg" alt="">
-                <img src="./img/story/share/story2.jpg" alt="">
-                <img src="./img/story/share/story3.jpg" alt="">
-                <img src="./img/story/share/story4.jpg" alt="">
-            </div>
-        </div>
-        <!-- story-1-end -->
+			<!-- story-2 -->
+			<div class="story-2">
+				<div class="info">
+					<h1 class="info_heading">
+						Để chuyên gia đánh giá việc học của bạn
+					</h1>
+					<p class="info_explain">
+						Có quyền truy cập vào phản hồi video được cá nhân hóa từ người sáng
+						tạo, người có ảnh hưởng và chuyên gia yêu thích của bạn. Tham gia
+						cộng đồng độc quyền của họ vào Hàng tháng và nhận được hỗ trợ,
+						khuyến khích và truyền cảm hứng trong các nhóm. Tham gia lớp học với
+						bạn bè của bạn và hỗ trợ cho những người mới từ khắp nơi trên thế
+						giới.
+					</p>
+				</div>
+				<div class="feedback_story-2">
+					<div>
+						<div class="feedback-gif">
+							<img src="./img/story/feedback/feedback1b.gif" alt="" />
+						</div>
+						<img src="./img/story/feedback/feedback1.png" alt="" />
+					</div>
+					<div>
+						<div class="feedback-gif">
+							<img src="./img/story/feedback/feedback2b.gif" alt="" />
+						</div>
+						<img src="./img/story/feedback/feedback2.png" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- story-2-end -->
 
-        <!-- story-2 -->
-        <div class="story-2">
-            <div class="info">
-                <h1 class="info_heading">
-                    Để chuyên gia đánh giá việc học của bạn
-                </h1>
-                <p class="info_explain">Có quyền truy cập vào phản hồi video được cá nhân hóa từ người
-                    sáng tạo, người có ảnh hưởng và chuyên gia yêu thích của bạn. Tham gia cộng đồng độc quyền của họ
-                    vào Hàng tháng và nhận được hỗ trợ, khuyến khích và truyền cảm hứng trong các nhóm. Tham gia lớp học
-                    với bạn bè của bạn và hỗ trợ cho những người mới từ khắp nơi trên thế giới.</p>
-            </div>
-            <div class="feedback_story-2">
-                <div>
-                    <div class="feedback-gif">
-                        <img src="./img/story/feedback/feedback1b.gif" alt="">
-                    </div>
-                    <img src="./img/story/feedback/feedback1.png" alt="">
-                </div>
-                <div>
-                    <div class="feedback-gif">
-                        <img src="./img/story/feedback/feedback2b.gif" alt="">
-                    </div>
-                    <img src="./img/story/feedback/feedback2.png" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- story-2-end -->
+			<!-- story-3 -->
+			<div class="story-3">
+				<div class="info">
+					<h1 class="info_heading">
+						Nắm bắt và chia sẻ hành trình của bạn
+					</h1>
+					<p class="info_explain">
+						Hàng tháng giúp bạn tạo ra một "con đường" để kể câu chuyện về quá
+						trình học tập kéo dài một tháng của bạn cho mỗi lớp. Con đường của
+						bạn là một câu chuyện có thể chia sẻ cho bạn bè, gia đình và chính
+						bạn. Ghi lại những khoảnh khắc, đó là tất cả về cuộc hành trình.
+					</p>
+				</div>
+				<div class="journey_story-3">
+					<img src="./img/story/journey/journey1.png" alt="" />
+					<img src="./img/story/journey/journey2.png" alt="" />
+					<img src="./img/story/journey/journey3.png" alt="" />
+					<img src="./img/story/journey/journey4.png" alt="" />
+					<img src="./img/story/journey/journey1.png" alt="" />
+					<img src="./img/story/journey/journey2.png" alt="" />
+				</div>
+			</div>
+			<!-- story-3-end -->
 
-        <!-- story-3 -->
-        <div class="story-3">
-            <div class="info">
-                <h1 class="info_heading">
-                    Nắm bắt và chia sẻ hành trình của bạn
-                </h1>
-                <p class="info_explain">Hàng tháng giúp bạn tạo ra một "con đường" để kể câu chuyện về
-                    quá
-                    trình học tập kéo dài một tháng của bạn cho mỗi lớp. Con đường của bạn là một câu chuyện có thể chia
-                    sẻ cho bạn bè, gia đình và chính bạn. Ghi lại những khoảnh khắc, đó là tất cả về cuộc hành trình.
-                </p>
-            </div>
-            <div class="journey_story-3">
-                <img src="./img/story/journey/journey1.png" alt="">
-                <img src="./img/story/journey/journey2.png" alt="">
-                <img src="./img/story/journey/journey3.png" alt="">
-                <img src="./img/story/journey/journey4.png" alt="">
-                <img src="./img/story/journey/journey1.png" alt="">
-                <img src="./img/story/journey/journey2.png" alt="">
-            </div>
-        </div>
-        <!-- story-3-end -->
+			<!-- story-4 -->
+			<div class="story-4">
+				<div class="info">
+					<h1 class="info_heading">
+						Gặp gỡ những người sáng tạo yêu thích của bạn
+					</h1>
+					<p class="info_explain">
+						Lần đầu tiên, hãy xem quy trình sáng tạo của người sáng tạo yêu
+						thích của bạn, trong thục tế. Tham gia với họ thông qua một hành
+						trình dài một tháng khi họ giải thích các phương pháp của họ, từng
+						bước một. Đây là những giáo viên giỏi nhất trên thế giới, như hàng
+						triệu người trên Internet biết.
+					</p>
+				</div>
+				<div class="behind_story-4">
+					<div class="list_actor">
+						<img
+							src="./img/story/actor/actor1.png"
+							alt=""
+							class="selected"
+							data-idActor="1"
+						/>
+						<img src="./img/story/actor/actor2.png" alt="" data-idActor="2" />
+						<img src="./img/story/actor/actor3.png" alt="" data-idActor="3" />
+						<img src="./img/story/actor/actor4.png" alt="" data-idActor="4" />
+						<img src="./img/story/actor/actor5.png" alt="" data-idActor="5" />
+						<img src="./img/story/actor/actor6.png" alt="" data-idActor="6" />
+					</div>
+					<div class="behind_actor">
+						<div class="img_actor">
+							<img src="./img/story/actor/actor1b.jpg" alt="" />
+						</div>
+						<div class="content_actor">
+							<h3 class="name-actor">Ten Hundred</h3>
+							<div class="expert-actor">
+								Chuyên gia vẽ những ý tưởng cùng bạn
+							</div>
+							<div class="chanel-actor">
+								<div class="chanel">
+									<svg width="36" height="25" fill="none" class="youtube-play">
+										<path
+											d="M34.878 3.877a4.452 4.452 0 00-3.15-3.136C28.95 0 17.811 0 17.811 0S6.671 0 3.894.741a4.452 4.452 0 00-3.15 3.136C0 6.644 0 12.415 0 12.415s0 5.772.744 8.538c.41 1.527 1.617 2.678 3.15 3.086 2.778.742 13.917.742 13.917.742s11.14 0 13.917-.742c1.533-.408 2.74-1.56 3.15-3.086.744-2.766.744-8.538.744-8.538s0-5.771-.744-8.538zm-20.71 13.779V7.176l9.31 5.24-9.31 5.24z"
+											fill="#ff0000"
+										></path>
+									</svg>
+									<span>255k Subscribers</span>
+								</div>
+								<div class="chanel">
+									<svg width="35" height="35" fill="none" class="youtube-play">
+										<path
+											d="M17.5 35C27.165 35 35 27.165 35 17.5S27.165 0 17.5 0 0 7.835 0 17.5 7.835 35 17.5 35z"
+											fill="url(#prefix__paint0_linear)"
+										></path>
+										<path
+											d="M17.502 11.921a5.569 5.569 0 00-5.577 5.579 5.569 5.569 0 005.577 5.578 5.569 5.569 0 005.577-5.578 5.569 5.569 0 00-5.577-5.579zm0 9.205a3.633 3.633 0 01-3.626-3.627c0-2 1.626-3.626 3.626-3.626s3.626 1.626 3.626 3.627c0 2-1.631 3.626-3.626 3.626zm7.106-9.433c0 .723-.583 1.301-1.301 1.301a1.301 1.301 0 111.3-1.301zm3.693 1.32c-.082-1.742-.48-3.286-1.757-4.558-1.271-1.272-2.815-1.67-4.557-1.757-1.796-.102-7.179-.102-8.975 0-1.737.082-3.28.48-4.557 1.752-1.277 1.272-1.67 2.816-1.757 4.559-.102 1.796-.102 7.18 0 8.976.082 1.743.48 3.287 1.757 4.559 1.276 1.272 2.815 1.67 4.557 1.757 1.796.102 7.179.102 8.975 0 1.742-.082 3.286-.48 4.557-1.757 1.272-1.272 1.67-2.816 1.757-4.559.102-1.796.102-7.175 0-8.971zm-2.32 10.9a3.671 3.671 0 01-2.067 2.068c-1.432.568-4.83.437-6.412.437-1.582 0-4.985.126-6.412-.437a3.671 3.671 0 01-2.068-2.068c-.567-1.433-.436-4.83-.436-6.413 0-1.583-.127-4.986.436-6.414a3.671 3.671 0 012.068-2.068c1.432-.568 4.83-.437 6.412-.437 1.582 0 4.985-.126 6.412.437a3.67 3.67 0 012.067 2.068c.568 1.432.437 4.83.437 6.414 0 1.582.131 4.985-.437 6.413z"
+											fill="#fff"
+										></path>
+										<defs>
+											<linearGradient
+												id="prefix__paint0_linear"
+												x1="17.5"
+												y1="0"
+												x2="0"
+												y2="35"
+												gradientUnits="userSpaceOnUse"
+											>
+												<stop stop-color="#860193"></stop>
+												<stop offset="0.578" stop-color="#FF1622"></stop>
+												<stop offset="1" stop-color="#FFE005"></stop>
+											</linearGradient>
+										</defs>
+									</svg>
+									<span>83k Followers</span>
+								</div>
+							</div>
+							<div class="intro-actor">
+								Ten Hundred là một nghệ sĩ đến từ Seattle, WA, người chuyên làm
+								việc sáng tạo, giàu trí tưởng tượng. Ông đã tạo ra tác phẩm cho
+								một số công ty lớn nhất trên thế giới, như Amazon, Nordstrom và
+								Converse. Ten Hundred đã xây dựng một lượng người theo dõi và
+								truyền cảm hứng cho hàng trăm ngàn nghệ sĩ khác.
+							</div>
+							<div class="class-actor">
+								<a href="#">Go to class now</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- story-4-end -->
 
-        <!-- story-4 -->
-        <div class="story-4">
-            <div class="info">
-                <h1 class="info_heading">
-                    Gặp gỡ những người sáng tạo yêu thích của bạn
-                </h1>
-                <p class="info_explain">Lần đầu tiên, hãy xem quy trình sáng tạo của người sáng
-                    tạo yêu thích của bạn, trong thục tế. Tham gia với họ thông qua một hành trình dài một tháng
-                    khi họ giải thích các phương pháp của họ, từng bước một. Đây là những giáo viên giỏi nhất trên thế
-                    giới, như hàng triệu người trên Internet biết.
-                </p>
-            </div>
-            <div class="behind_story-4">
-                <div class="list_actor">
-                    <img src="./img/story/actor/actor1.png" alt="" class="selected" data-idActor="1">
-                    <img src="./img/story/actor/actor2.png" alt="" data-idActor="2">
-                    <img src="./img/story/actor/actor3.png" alt="" data-idActor="3">
-                    <img src="./img/story/actor/actor4.png" alt="" data-idActor="4">
-                    <img src="./img/story/actor/actor5.png" alt="" data-idActor="5">
-                    <img src="./img/story/actor/actor6.png" alt="" data-idActor="6">
-                </div>
-                <div class="behind_actor">
-                    <div class="img_actor">
-                        <img src="./img/story/actor/actor1b.jpg" alt="">
-                    </div>
-                    <div class="content_actor">
-                        <h3 class="name-actor">Ten Hundred</h3>
-                        <div class="expert-actor">
-                            Chuyên gia vẽ những ý tưởng cùng bạn
-                        </div>
-                        <div class="chanel-actor">
-                            <div class="chanel">
-                                <svg width="36" height="25" fill="none" class="youtube-play">
-                                    <path
-                                        d="M34.878 3.877a4.452 4.452 0 00-3.15-3.136C28.95 0 17.811 0 17.811 0S6.671 0 3.894.741a4.452 4.452 0 00-3.15 3.136C0 6.644 0 12.415 0 12.415s0 5.772.744 8.538c.41 1.527 1.617 2.678 3.15 3.086 2.778.742 13.917.742 13.917.742s11.14 0 13.917-.742c1.533-.408 2.74-1.56 3.15-3.086.744-2.766.744-8.538.744-8.538s0-5.771-.744-8.538zm-20.71 13.779V7.176l9.31 5.24-9.31 5.24z"
-                                        fill="#ff0000"></path>
-                                </svg>
-                                <span>255k Subscribers</span>
-                            </div>
-                            <div class="chanel">
-                                <svg width="35" height="35" fill="none" class="youtube-play">
-                                    <path
-                                        d="M17.5 35C27.165 35 35 27.165 35 17.5S27.165 0 17.5 0 0 7.835 0 17.5 7.835 35 17.5 35z"
-                                        fill="url(#prefix__paint0_linear)"></path>
-                                    <path
-                                        d="M17.502 11.921a5.569 5.569 0 00-5.577 5.579 5.569 5.569 0 005.577 5.578 5.569 5.569 0 005.577-5.578 5.569 5.569 0 00-5.577-5.579zm0 9.205a3.633 3.633 0 01-3.626-3.627c0-2 1.626-3.626 3.626-3.626s3.626 1.626 3.626 3.627c0 2-1.631 3.626-3.626 3.626zm7.106-9.433c0 .723-.583 1.301-1.301 1.301a1.301 1.301 0 111.3-1.301zm3.693 1.32c-.082-1.742-.48-3.286-1.757-4.558-1.271-1.272-2.815-1.67-4.557-1.757-1.796-.102-7.179-.102-8.975 0-1.737.082-3.28.48-4.557 1.752-1.277 1.272-1.67 2.816-1.757 4.559-.102 1.796-.102 7.18 0 8.976.082 1.743.48 3.287 1.757 4.559 1.276 1.272 2.815 1.67 4.557 1.757 1.796.102 7.179.102 8.975 0 1.742-.082 3.286-.48 4.557-1.757 1.272-1.272 1.67-2.816 1.757-4.559.102-1.796.102-7.175 0-8.971zm-2.32 10.9a3.671 3.671 0 01-2.067 2.068c-1.432.568-4.83.437-6.412.437-1.582 0-4.985.126-6.412-.437a3.671 3.671 0 01-2.068-2.068c-.567-1.433-.436-4.83-.436-6.413 0-1.583-.127-4.986.436-6.414a3.671 3.671 0 012.068-2.068c1.432-.568 4.83-.437 6.412-.437 1.582 0 4.985-.126 6.412.437a3.67 3.67 0 012.067 2.068c.568 1.432.437 4.83.437 6.414 0 1.582.131 4.985-.437 6.413z"
-                                        fill="#fff"></path>
-                                    <defs>
-                                        <linearGradient id="prefix__paint0_linear" x1="17.5" y1="0" x2="0" y2="35"
-                                            gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#860193"></stop>
-                                            <stop offset="0.578" stop-color="#FF1622"></stop>
-                                            <stop offset="1" stop-color="#FFE005"></stop>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <span>83k Followers</span>
-                            </div>
-                        </div>
-                        <div class="intro-actor">Ten Hundred là một nghệ sĩ đến từ Seattle, WA, người chuyên làm việc
-                            sáng tạo, giàu trí tưởng tượng. Ông đã tạo ra tác phẩm cho một số công ty lớn nhất trên thế
-                            giới, như Amazon, Nordstrom và Converse. Ten Hundred đã xây dựng một lượng người theo dõi và
-                            truyền cảm hứng cho hàng trăm ngàn nghệ sĩ khác.
-                        </div>
-                        <div class="class-actor">
-                            <a href="#">Go to class now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- story-4-end -->
+			<!-- story-5 -->
+			<div class="story-5">
+				<div class="info">
+					<h1 class="info_heading">
+						Học trực tuyến tại nhà, theo sắp xếp của bạn
+					</h1>
+					<p class="info_explain">
+						Học từ bất cứ đâu, với một lịch trình linh hoạt. Tương tác với người
+						học từ khắp nơi trên thế giới trong những trải nghiệm học tập kéo
+						dài một tháng không thể quên. Được dạy bởi những người giỏi nhất.
+						Sau mỗi trải nghiệm hàng tháng, bạn sẽ vẫn có quyền truy cập trọn
+						đời vào chương trình giảng dạy đầy đủ, lộ trình học tập có thể chia
+						sẻ của bạn và cộng đồng.
+					</p>
+				</div>
+				<div class="learning-onl">
+					<img src="./img/story/online/leaning-onl.png" alt="" />
+				</div>
+			</div>
+			<!-- story-5-end -->
+		</div>
+		<!-- story-end -->
 
-        <!-- story-5 -->
-        <div class="story-5">
-            <div class="info">
-                <h1 class="info_heading">
-                    Học trực tuyến tại nhà, theo sắp xếp của bạn
-                </h1>
-                <p class="info_explain">Học từ bất cứ đâu, với một lịch trình linh hoạt. Tương tác
-                    với người học từ khắp nơi trên thế giới trong những trải nghiệm học tập kéo dài một tháng không
-                    thể quên. Được dạy bởi những người giỏi nhất. Sau mỗi trải nghiệm hàng tháng, bạn sẽ vẫn có
-                    quyền
-                    truy cập trọn đời vào chương trình giảng dạy đầy đủ, lộ trình học tập có thể chia sẻ của bạn và
-                    cộng đồng.
-                </p>
-            </div>
-            <div class="learning-onl">
-                <img src="./img/story/online/leaning-onl.png" alt="">
-            </div>
-        </div>
-        <!-- story-5-end -->
-    </div>
-    <!-- story-end -->
+		<div class="classes">
+			<div class="info">
+				<h1 class="info_title">
+					Nắm bắt và chia sẻ hành trình của bạn
+				</h1>
+				<h1 class="info_heading">
+					Nắm bắt và chia sẻ hành trình của bạn
+				</h1>
+				<a class="scroll-to-classes" href="#/">
+					<button class="info_btn">
+						Tham gia ngay
+					</button>
+				</a>
+			</div>
+		</div>
 
-    <div class="classes">
-        <div class="info">
-            <h1 class="info_title">
-                Nắm bắt và chia sẻ hành trình của bạn
-            </h1>
-            <h1 class="info_heading">
-                Nắm bắt và chia sẻ hành trình của bạn
-            </h1>
-            <a class="scroll-to-classes" href="#/">
-                <button class="info_btn">
-                    Tham gia ngay
-                </button>
-            </a>
-        </div>
-    </div>
+		<!-- modal -->
+		<div class="modal">
+			<div class="modal_container info">
+				<div class="modal-top">
+					<i class="fa fa-times fa-2x" data-opc="1"></i>
+				</div>
+				<div class="modal-content">
+					<div class="modal-title">
+						<h3>Đăng Nhập</h3>
+						<div>
+							Bạn chưa có tài khoản?
+							<a class="showSignUpForm" href="#"> Đăng Ký Ngay</a>
+						</div>
+					</div>
+					<div class="modal-body">
+						<div class="form-group" data-valid="Hãy nhập đúng giá trị">
+							<input
+								type="email"
+								name="email"
+								id="email"
+								class="form-control email"
+								placeholder="Email"
+								autofocus
+							/>
+						</div>
+						<div class="form-group" data-valid="Mật khẩu cần hơn 8 ký tự">
+							<input
+								type="password"
+								name="psw"
+								id="psw"
+								class="form-control psw"
+								placeholder="Mật Khẩu"
+							/>
+						</div>
+					</div>
+					<div class="modal-bottom">
+						<button class="info_btn form-btn">Đăng Nhập</button>
+						<div>
+							<a class="showResetForm" href="#">Quên Mật Khẩu</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- modal-end -->
 
-    <!-- modal -->
-    <div class="modal">
-        <div class="modal_container info">
-            <div class="modal-top">
-                <i class="fa fa-times fa-2x" data-opc="1"></i>
-            </div>
-            <div class="modal-content">
-                <div class="modal-title">
-                    <h3>Đăng Nhập</h3>
-                    <div>Bạn chưa có tài khoản?
-                        <a class="showSignUpForm" href="#"> Đăng Ký Ngay</a>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" name="usn" id="usn" class="usn" placeholder="Tên Đăng Nhập" autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" name="psw" id="psw" class="psw" placeholder="Mật Khẩu">
-                    </div>
-                </div>
-                <div class="modal-bottom">
-                    <button class="info_btn">Đăng Nhập</button>
-                    <div>
-                        <a class="showResetForm" href="#">Quên Mật Khẩu</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- modal-end -->
+		<!-- success form check -->
+		<div class="success-checkmark">
+			<div class="check-icon">
+				<span class="icon-line line-tip"></span>
+				<span class="icon-line line-long"></span>
+				<div class="icon-circle"></div>
+				<div class="icon-fix"></div>
+			</div>
+		</div>
+		<!-- success form check - end -->
 
-    <button id="scroll-to-top" class="scroll-btn scroll-top">
-        <i class="fas fa-chevron-up icon-awesome"></i>
-    </button>
-    <script src="./js/main.js"></script>
-    <script src="./js/modal.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script src="./js/storySlide.js"></script>
-</body>
-
+		<button id="scroll-to-top" class="scroll-btn scroll-top">
+			<i class="fas fa-chevron-up icon-awesome"></i>
+		</button>
+		<script src="./js/modal.js"></script>
+		<script src="./js/scroll.js"></script>
+		<script src="./js/storySlide.js"></script>
+		<script src="./js/validate.js"></script>
+	</body>
 </html>

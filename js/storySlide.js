@@ -1,80 +1,88 @@
 //story slide
 const actors = [
-    {
-        name: 'Ten Hundred',
-        img: './img/story/actor1b.jpg',
-        expert: 'Chuyên gia vẽ những ý tưởng cùng bạn',
-        chanel: {
-            youtube: '255k',
-            ins: '83k',
-        },
-        intro: 'Ten Hundred là một nghệ sĩ đến từ Seattle, WA, người chuyên làm việc sáng tạo, giàu trí tưởng tượng. Ông đã tạo ra tác phẩm cho một số công ty lớn nhất trên thế giới, như Amazon, Nordstrom và Converse. Ten Hundred đã xây dựng một lượng người theo dõi và truyền cảm hứng cho hàng trăm ngàn nghệ sĩ khác.'
-    },
-    {
-        name: 'Andrew Huang',
-        img: './img/story/actor2b.jpg',
-        expert: 'Chuyên gia sản xuất âm nhạc',
-        chanel: {
-            youtube: '1.92M',
-            ins: '170k',
-        },
-        intro: 'Một nhạc sĩ đa năng và sung mãn, Andrew Huang đã phát hành hơn 2.000 bài hát trong một loạt các thể loại. Ông có lẽ được biết đến nhiều nhất với những kỳ tích kỳ lạ về âm nhạc đã mang lại cho ông hơn 1,92 triệu người đăng ký và hơn 200 triệu lượt xem trên kênh YouTube của mình. Andrew là âm nhạc.'
-    },
-    {
-        name: 'Daria Callie',
-        img: './img/story/actor3b.jpg',
-        expert: 'Chuyên gia tranh chân dung thực tế',
-        chanel: {
-            youtube: '535k',
-            ins: '183k',
-        },
-        intro: 'Daria Callie là một nghệ sĩ chuyên nghiệp được biết đến rộng rãi với những bức tranh sơn dầu của cô. Trong các tác phẩm của mình, cô tạo ra những thế giới nơi chủ nghĩa hiện thực và sự trừu tượng cùng tồn tại. Cô sử dụng màu sắc nhẹ nhàng nhưng biểu cảm để hỗ trợ cảm giác thanh thản, mạnh mẽ và tự do.'
-    },
-    {
-        name: 'Blanks',
-        img: './img/story/actor4b.jpg',
-        expert: 'Chuyên gia sáng tác nhạc',
-        chanel: {
-            youtube: '1.12M',
-            ins: '258k',
-        },
-        intro: 'Blanks (Simon de Wit) là một nhạc sĩ đa tài nổi tiếng với những thử thách âm nhạc ấn tượng trên Youtube: làm lại các bài hát nổi tiếng từ đầu trong một giờ, tái tạo các bài hát theo phong cách hoàn toàn khác và tạo ra các bài hát với những người theo dõi anh. Lượt tiếp cận Youtube của Blanks vượt quá 41 triệu lượt xem video.'
-    },
-    {
-        name: 'Stevie Mackey',
-        img: './img/story/actor5b.jpg',
-        expert: 'Chuyên gia thanh nhạc',
-        chanel: {
-            youtube: '',
-            ins: '329k',
-        },
-        intro: 'Trong thập kỷ qua, Stevie Mackey là huấn luyện viên thanh nhạc của nhiều nghệ sĩ khao khát và thành lập như Selena Gomez, Jennifer Lopez, Fergie, Kanye West và Kelly Rowland, kể tên một vài người. Stevie đã làm việc với NBC từ The Voice trong hơn 8 mùa, và vẫn huấn luyện một số tên tuổi lớn nhất trong âm nhạc.'
-    },
-    {
-        name: 'Matt Komo',
-        img: './img/story/actor6b.jpg',
-        expert: 'Chuyên gia phim ảnh',
-        chanel: {
-            youtube: '180k',
-            ins: '196k',
-        },
-        intro: 'Tài năng của Matt Komo với tư cách là nhà quay phim và nhiếp ảnh gia đã đưa anh ta đi khắp thế giới khi anh ta ghi lại quan điểm độc đáo của mình về nhiều điểm đến của mình. Là cựu Giám đốc Nội dung Xã hội của GoPro, Matt đã tăng sự hiện diện của thương hiệu trên Instagram từ 3 lên 13,6 triệu. Quan trọng nhất, công việc của Matt đã nói lên điều đó.'
-    }
+	{
+		name: "Ten Hundred",
+		img: "./img/story/actor/actor1b.jpg",
+		expert: "Chuyên gia vẽ những ý tưởng cùng bạn",
+		chanel: {
+			youtube: "255k",
+			ins: "83k",
+		},
+		intro:
+			"Ten Hundred là một nghệ sĩ đến từ Seattle, WA, người chuyên làm việc sáng tạo, giàu trí tưởng tượng. Ông đã tạo ra tác phẩm cho một số công ty lớn nhất trên thế giới, như Amazon, Nordstrom và Converse. Ten Hundred đã xây dựng một lượng người theo dõi và truyền cảm hứng cho hàng trăm ngàn nghệ sĩ khác.",
+	},
+	{
+		name: "Andrew Huang",
+		img: "./img/story/actor/actor2b.jpg",
+		expert: "Chuyên gia sản xuất âm nhạc",
+		chanel: {
+			youtube: "1.92M",
+			ins: "170k",
+		},
+		intro:
+			"Một nhạc sĩ đa năng và sung mãn, Andrew Huang đã phát hành hơn 2.000 bài hát trong một loạt các thể loại. Ông có lẽ được biết đến nhiều nhất với những kỳ tích kỳ lạ về âm nhạc đã mang lại cho ông hơn 1,92 triệu người đăng ký và hơn 200 triệu lượt xem trên kênh YouTube của mình. Andrew là âm nhạc.",
+	},
+	{
+		name: "Daria Callie",
+		img: "./img/story/actor/actor3b.jpg",
+		expert: "Chuyên gia tranh chân dung thực tế",
+		chanel: {
+			youtube: "535k",
+			ins: "183k",
+		},
+		intro:
+			"Daria Callie là một nghệ sĩ chuyên nghiệp được biết đến rộng rãi với những bức tranh sơn dầu của cô. Trong các tác phẩm của mình, cô tạo ra những thế giới nơi chủ nghĩa hiện thực và sự trừu tượng cùng tồn tại. Cô sử dụng màu sắc nhẹ nhàng nhưng biểu cảm để hỗ trợ cảm giác thanh thản, mạnh mẽ và tự do.",
+	},
+	{
+		name: "Blanks",
+		img: "./img/story/actor/actor4b.jpg",
+		expert: "Chuyên gia sáng tác nhạc",
+		chanel: {
+			youtube: "1.12M",
+			ins: "258k",
+		},
+		intro:
+			"Blanks (Simon de Wit) là một nhạc sĩ đa tài nổi tiếng với những thử thách âm nhạc ấn tượng trên Youtube: làm lại các bài hát nổi tiếng từ đầu trong một giờ, tái tạo các bài hát theo phong cách hoàn toàn khác và tạo ra các bài hát với những người theo dõi anh. Lượt tiếp cận Youtube của Blanks vượt quá 41 triệu lượt xem video.",
+	},
+	{
+		name: "Stevie Mackey",
+		img: "./img/story/actor/actor5b.jpg",
+		expert: "Chuyên gia thanh nhạc",
+		chanel: {
+			youtube: "",
+			ins: "329k",
+		},
+		intro:
+			"Trong thập kỷ qua, Stevie Mackey là huấn luyện viên thanh nhạc của nhiều nghệ sĩ khao khát và thành lập như Selena Gomez, Jennifer Lopez, Fergie, Kanye West và Kelly Rowland, kể tên một vài người. Stevie đã làm việc với NBC từ The Voice trong hơn 8 mùa, và vẫn huấn luyện một số tên tuổi lớn nhất trong âm nhạc.",
+	},
+	{
+		name: "Matt Komo",
+		img: "./img/story/actor/actor6b.jpg",
+		expert: "Chuyên gia phim ảnh",
+		chanel: {
+			youtube: "180k",
+			ins: "196k",
+		},
+		intro:
+			"Tài năng của Matt Komo với tư cách là nhà quay phim và nhiếp ảnh gia đã đưa anh ta đi khắp thế giới khi anh ta ghi lại quan điểm độc đáo của mình về nhiều điểm đến của mình. Là cựu Giám đốc Nội dung Xã hội của GoPro, Matt đã tăng sự hiện diện của thương hiệu trên Instagram từ 3 lên 13,6 triệu. Quan trọng nhất, công việc của Matt đã nói lên điều đó.",
+	},
 ];
 
-const imgs = Array.from(document.querySelector('.list_actor').getElementsByTagName('img'));
+const imgs = Array.from(
+	document.querySelector(".list_actor").getElementsByTagName("img")
+);
 
-imgs.forEach((img) => img.addEventListener('click', selectActor))
+imgs.forEach((img) => img.addEventListener("click", selectActor));
 
 function selectActor() {
-    imgs.forEach((img) => img.classList.remove('selected'))
-    this.classList.add('selected')
-    introActor(actors[this.dataset.idactor - 1])
+	imgs.forEach((img) => img.classList.remove("selected"));
+	this.classList.add("selected");
+	introActor(actors[this.dataset.idactor - 1]);
 }
 
 function introActor({ name, img, expert, chanel, intro }) {
-    const behindSect = document.querySelector('.behind_actor');
-    const innerEl = `<div class="img_actor">
+	const behindSect = document.querySelector(".behind_actor");
+	const innerEl = `<div class="img_actor">
                         <img src="${img}" alt="">
                     </div>
                     <div class="content_actor">
@@ -116,5 +124,5 @@ function introActor({ name, img, expert, chanel, intro }) {
                             <a href="#">Go to class now</a>
                         </div>
                     </div>`;
-    behindSect.innerHTML = innerEl;
+	behindSect.innerHTML = innerEl;
 }

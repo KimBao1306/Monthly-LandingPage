@@ -1,202 +1,102 @@
 /* header */
 header {
-    height: 100vh;
-    width: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem 0;
-    position: relative;
+	height: 100vh;
+	width: 100%;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem 0;
+	position: relative;
 }
 
 .header_video,
 .header_video > video {
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
 .header_video:after {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .3);
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 .menu {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .menu .menu_links ul {
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: space-between;
+	font-size: 1.6rem;
+	display: flex;
+	justify-content: space-between;
 }
 
 .menu_links li {
-    padding: 1.6rem;
+	padding: 1.6rem;
 }
 
-.menu_links li a{
-    color: #acacba;
+.menu_links li a {
+	color: #acacba;
 }
 
-.menu_links li a:hover{
-    color: #fff;
+.menu_links li a:hover {
+	color: #fff;
 }
 
 .info {
-    text-align: center;
-    padding: 3rem;
+	text-align: center;
+	padding: 3rem;
 }
 
 .info .info_title {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    text-transform: uppercase;
+	margin-bottom: 2rem;
+	font-size: 1.8rem;
+	text-transform: uppercase;
 }
 
 .info .info_heading {
-    font-size: 8rem;
-    margin-bottom: 2rem;
+	font-size: 8rem;
+	margin-bottom: 2rem;
 }
 
 .info .info_explain {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
+	font-size: 2.4rem;
+	margin-bottom: 2rem;
 }
 
 .info .info_btn {
-    padding: 1.8rem 4.6rem;
-    font-size: 1.8rem;
-    border-radius: .5rem;
-    outline: none;
-    border: 0;
-    cursor: pointer;
-    background-color: #03aef8;
+	padding: 1.8rem 4.6rem;
+	font-size: 1.8rem;
+	border-radius: 0.5rem;
+	outline: none;
+	border: 0;
+	cursor: pointer;
+	background-color: #03aef8;
 }
 
-.arrow a{
-    color: #acacba;
+.arrow a {
+	color: #acacba;
 }
 
 .info .info_btn,
-.arrow a:hover  {
-    color: #fff;
+.arrow a:hover {
+	color: #fff;
 }
 
 .info .info_btn:hover {
-    background-color: #079cdd;
+	background-color: #079cdd;
 }
 
 /* header-end */
-
-
-/* modal */
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, .7);
-    width: 100%;
-    height: 100%;
-    padding: 5vh 1rem 0;
-    opacity: 0;
-    display: none;
-    transition: all .8s;
-}
-
-.modal a {
-    color: #0475a5;
-}
-
-.modal a:hover {
-    color: #079cdd;
-}
-
-.modal .modal_container{
-    background-color: #fff;
-    max-width: 600px;
-    max-height: 50rem;
-    margin: 0 auto;
-    border-radius: 2rem;
-}
-
-.modal_container .modal-top {
-    text-align: right;
-}
-
-.modal_container .modal-top > i {
-    cursor: pointer;
-    color: #ababab;
-}
-
-.modal_container .modal-top > i:hover {
-    color: #808080;
-}
-
-.modal .modal-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 2.6rem;
-    margin-bottom: 3rem;
-}
-
-.modal .modal-title > div{
-    font-size: 1.3rem;
-}
-
-.modal .modal-body .form-group input {
-    font-size: 1.6rem;
-    height: 6rem;
-    width: 100%;
-    border-radius: .5rem;
-    border: 1px solid #ababab;
-    padding: 1rem 3rem;
-    margin-bottom: 2rem;
-    outline: none;
-}
-
-.modal .modal-body .form-group.double-group {
-    display: flex;
-    justify-content: space-between;
-}
-
-.modal .modal-body .form-group.double-group input {
-    width: 48%;    
-}
-
-.modal .modal-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-top: .3px solid #ababab;
-    margin: 0 -1.5rem 0;
-    padding-top: 2rem;
-}
-
-.modal .modal-bottom > button {
-    margin-bottom: 2rem;
-}
-
-.modal .modal-bottom > button:only-child {
-    margin-bottom: 0;
-}
-
-.modal .modal-bottom > div {
-    font-size: 1.3rem;
-}
-
-/* modal-end */

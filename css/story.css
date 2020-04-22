@@ -1,294 +1,294 @@
 /* story */
 .story {
-    padding: 5rem 0;
-    background-color: #1c1c25; 
+	padding: 5rem 0;
+	background-color: #1c1c25;
 }
 
 .story .info_title,
 .story .info_heading {
-    color: #fff;
+	color: #fff;
 }
 
 .story .info_heading {
-    font-size: 4rem;
-    font-weight: 700;
+	font-size: 4rem;
+	font-weight: 700;
 }
 
 .story .info_explain {
-    color: #88889d;
-    width: 100%;
+	color: #88889d;
+	width: 100%;
 }
 
 .story .story-1 .slide_story-1 {
-    display: flex;
-    height: 50rem;
-    margin-bottom: 5rem;
-    overflow-x: hidden;
+	display: flex;
+	height: 50rem;
+	margin-bottom: 5rem;
+	overflow-x: hidden;
 }
 
 .story .slide_story-1 img {
-    height: 100%;   
-    margin-right: 5rem;
-    object-fit: cover;
-    animation: slideStory 100s linear infinite;
+	height: 100%;
+	margin-right: 5rem;
+	object-fit: cover;
+	animation: slideStory 100s linear infinite;
 }
 
 @keyframes slideStory {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-2250px);
-    }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-2250px);
+	}
 }
 
 .story .feedback_story-2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .story .feedback_story-2 > div {
-    width: 50%;
-    text-align: center;
-    position: relative;
-    margin: 12rem 0 5rem;
+	width: 50%;
+	text-align: center;
+	position: relative;
+	margin: 12rem 0 5rem;
 }
 
 .story .feedback_story-2 > div > img {
-    width: 80%;
-} 
+	width: 80%;
+}
 
 .story .feedback_story-2 .feedback-gif {
-    position: absolute;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 8px #000;
-    top: -108px;
-    right: 20px;
-    padding: 1rem;
+	position: absolute;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 8px #000;
+	top: -108px;
+	right: 20px;
+	padding: 1rem;
 }
 
 .story .feedback_story-2 .feedback-gif img {
-    width: 12rem;
-    height: 12rem;
-    object-fit: cover;
+	width: 12rem;
+	height: 12rem;
+	object-fit: cover;
 }
 
 .story .journey_story-3 {
-    display: flex;
-    margin-bottom: 5rem;
-    overflow-x: hidden;
+	display: flex;
+	margin-bottom: 5rem;
+	overflow-x: hidden;
 }
 
 .story .journey_story-3 img {
-    width: 25%;
+	width: 25%;
 }
 
 .story .journey_story-3 img:nth-child(1) {
-    animation: journeySlide1 10s infinite;
+	animation: journeySlide1 10s infinite;
 }
 
 .story .journey_story-3 img:nth-child(2) {
-    animation: journeySlide2 10s infinite;
+	animation: journeySlide2 10s infinite;
 }
 
 .story .journey_story-3 img:nth-child(3) {
-    animation: journeySlide3 10s infinite;
+	animation: journeySlide3 10s infinite;
 }
 
 .story .journey_story-3 img:nth-child(4) {
-    animation: journeySlide4 10s infinite;
+	animation: journeySlide4 10s infinite;
 }
 
 @keyframes journeySlide1 {
-    0% {
-        opacity: .2;
-    }
-    10% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: .2;
-    }
+	0% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
 }
 
 @keyframes journeySlide2 {
-    0% {
-        opacity: .2;
-    }
-    10% {
-        opacity: .2;
-    }
-    25% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: .2;
-    }
+	0% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 0.2;
+	}
+	25% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
 }
 
 @keyframes journeySlide3 {
-    0% {
-        opacity: .2;
-    }
-    25% {
-        opacity: .2;
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: .2;
-    }
+	0% {
+		opacity: 0.2;
+	}
+	25% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
 }
 
 @keyframes journeySlide4 {
-    0% {
-        opacity: .2;
-    }
-    40% {
-        opacity: .2;
-    }
-    55% {
-        opacity: 1;
-    }
-    80% {
-        opacity: 1;
-    }
-    100% {
-        opacity: .2;
-    }
+	0% {
+		opacity: 0.2;
+	}
+	40% {
+		opacity: 0.2;
+	}
+	55% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.2;
+	}
 }
 
 @keyframes slideStoryJourney {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-820px);
-    }
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-820px);
+	}
 }
 
 .story .behind_story-4 .list_actor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 .story .behind_story-4 .list_actor img {
-    width: calc(100% / 20);
-    border-radius: 100%;
-    margin: 3rem;
-    opacity: .5;
-    transition: all .3s;
-    cursor: pointer;
+	width: calc(100% / 20);
+	border-radius: 100%;
+	margin: 3rem;
+	opacity: 0.5;
+	transition: all 0.3s;
+	cursor: pointer;
 }
 
-.story .behind_story-4 .list_actor img:hover, 
+.story .behind_story-4 .list_actor img:hover,
 .story .behind_story-4 .list_actor img.selected {
-    opacity: 1;
-    transform: scale(1.1);
+	opacity: 1;
+	transform: scale(1.1);
 }
 
 .story .behind_story-4 .behind_actor {
-    padding: 1.5rem;
-    max-width: 70%;
-    min-height: 400px;
-    margin: 0 auto 5rem;
-    border-radius: 1rem;
-    background-color: #fff;
-    display: flex;
+	padding: 1.5rem;
+	max-width: 70%;
+	min-height: 400px;
+	margin: 0 auto 5rem;
+	border-radius: 1rem;
+	background-color: #fff;
+	display: flex;
 }
 
 .story .behind_actor .img_actor {
-    width:  40%;
-    margin-right: 2rem; 
+	width: 40%;
+	margin-right: 2rem;
 }
 
 .story .behind_actor .img_actor img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 1rem;
 }
 
 .story .behind_actor .content_actor {
-    width: 60%;
+	width: 60%;
 }
 
 .story .behind_actor .content_actor .name-actor {
-    font-size: 3.6rem;
+	font-size: 3.6rem;
 }
 
 .story .behind_actor .content_actor .expert-actor {
-    font-size: 2rem;
-    color: #666;
+	font-size: 2rem;
+	color: #666;
 }
 
 .story .behind_actor .content_actor .chanel-actor {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 3rem 0;
 }
 
 .story .behind_actor .content_actor .chanel-actor .chanel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    border-radius: 20px;
-    padding: .5rem 2rem; 
-    margin-right: 2rem;
-    margin-top: 1rem;
-    transition: all .2s;
-    cursor: pointer;
-    font-size: 1.6rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+	padding: 0.5rem 2rem;
+	margin-right: 2rem;
+	margin-top: 1rem;
+	transition: all 0.2s;
+	cursor: pointer;
+	font-size: 1.6rem;
 }
 
 .story .behind_actor .content_actor .chanel-actor .chanel:hover {
-    transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .story .behind_actor .content_actor .chanel-actor .chanel > svg {
-    margin-right: 1rem;
+	margin-right: 1rem;
 }
 
 .story .behind_actor .content_actor .intro-actor {
-    font-size: 1.6rem;
-    color: #666;
+	font-size: 1.6rem;
+	color: #666;
 }
 
-.story .behind_actor .content_actor .class-actor a{
-    padding: 2rem 0;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: #03aef8;
-    text-transform: uppercase;
-    display: inline-block;
+.story .behind_actor .content_actor .class-actor a {
+	padding: 2rem 0;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: #03aef8;
+	text-transform: uppercase;
+	display: inline-block;
 }
 
-.story .behind_actor .content_actor .class-actor:hover a{
-    color: #018ac5;
+.story .behind_actor .content_actor .class-actor:hover a {
+	color: #018ac5;
 }
 
 .story .story-5 .learning-onl {
-    width: 60%;
-    margin: 0 auto;
+	width: 60%;
+	margin: 0 auto;
 }
 
-.story .story-5 .learning-onl img{
-    width: 100%;
-    object-fit: cover;
+.story .story-5 .learning-onl img {
+	width: 100%;
+	object-fit: cover;
 }
 /* story-end */
